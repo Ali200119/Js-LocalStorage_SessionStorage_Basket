@@ -12,7 +12,7 @@ header {
     justify-content: center;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 1;
 
     .box {
         width: 85%;
@@ -21,7 +21,7 @@ header {
         align-items: center;
 
         .home {
-            padding: 10px 23px;
+            padding: 8px 22px;
             text-decoration: none;
             color: white;
             text-transform: uppercase;
@@ -50,9 +50,9 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 100px;
-    
+
     .box {
-        width: 85%;
+        width: 95%;
 
         button {
             padding: 7px 13px;
@@ -80,10 +80,29 @@ main {
                             object-fit: cover;
                         }
 
-                        i {
-                            color: red;
-                            font-size: 25px;
+                        .plus, .minus {
+                            width: 40px;
+                            height: 40px;
                             cursor: pointer;
+                            font-size: 20px;
+                            background-color: gray;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            color: white;
+                        }
+
+                        .delete {
+                            font-size: 20px;
+                            cursor: pointer;
+                            width: 40px;
+                            height: 40px;
+                            background-color: red;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
                         }
                     }
                 }
@@ -92,6 +111,7 @@ main {
 
         h3 {
             margin-top: 70px;
+            margin-bottom: 35px;
         }
 
         .alert {

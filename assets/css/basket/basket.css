@@ -13,7 +13,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 }
 header .box {
   width: 85%;
@@ -22,7 +22,7 @@ header .box {
   align-items: center;
 }
 header .box .home {
-  padding: 10px 23px;
+  padding: 8px 22px;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
@@ -49,7 +49,7 @@ main {
   margin-top: 100px;
 }
 main .box {
-  width: 85%;
+  width: 95%;
 }
 main .box button {
   padding: 7px 13px;
@@ -72,13 +72,32 @@ main .box table tbody tr td img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .box table tbody tr td i {
-  color: red;
-  font-size: 25px;
+main .box table tbody tr td .plus, main .box table tbody tr td .minus {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  font-size: 20px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}
+main .box table tbody tr td .delete {
+  font-size: 20px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 main .box h3 {
   margin-top: 70px;
+  margin-bottom: 35px;
 }
 main .box .alert {
   display: flex;

@@ -19,7 +19,7 @@ addBtns.forEach(btn => {
         let existProduct = products.find(p => p.id == productId);
 
         if (existProduct != undefined) {
-            existProduct.count += 1;
+            existProduct.count ++;
         }
 
         else {

@@ -57,6 +57,7 @@ main #products .container .cards {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 35px;
 }
 main #products .container .cards .card {
   position: relative;
