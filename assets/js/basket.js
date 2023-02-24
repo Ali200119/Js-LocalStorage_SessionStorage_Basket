@@ -46,25 +46,6 @@ if (products != null && products.length != 0) {
                 table.classList.remove("deactive");
                 total.classList.remove("deactive");
                 clearAll.classList.remove("deactive");
-
-                let totalPrice = 0;
-
-                for (const filteredproduct of filteredBasket) {
-                    filteredTable.lastElementChild.innerHTML += `<tr>
-            <td class="deactive">${filteredproduct.id}</td>
-            <td><img src="${filteredproduct.imageUrl}"></td>
-            <td>${filteredproduct.name}</td>
-            <td>${filteredproduct.description}</td>
-            <td>$${filteredproduct.price}</td>
-            <td>${filteredproduct.count}</td>
-            <td>$${filteredproduct.price * filteredproduct.count}</td>
-            <td><i class="fa-solid fa-xmark"></i></td>
-        </tr>`;
-
-                    totalPrice += filteredproduct.price * filteredproduct.count;
-                }
-
-                total.innerText = `Total: $${totalPrice}`;
             }
 
             else {

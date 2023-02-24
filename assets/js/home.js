@@ -35,6 +35,12 @@ addBtns.forEach(btn => {
 
         localStorage.setItem("basket", JSON.stringify(products));
 
+        Swal.fire(
+            'Success!',
+            `${productName} has been added to the cart`,
+            'success'
+        )
+
         if (products == null) {
             document.querySelector("header .cart sup").innerText = 0;
         }
