@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    .box {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .home {
+            padding: 10px 23px;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: 1px solid white;
+            background-color: black;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+
+        .cart {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    
+    .box {
+        width: 85%;
+
+        table {
+            tbody {
+                tr {
+                    td {
+                        img {
+                            width: 150px;
+                            height: 100px;
+                            object-fit: cover;
+                        }
+
+                        i {
+                            color: red;
+                            font-size: 25px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        h3 {
+            margin-top: 70px;
+        }
+
+        .alert {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 40px;
+                margin-top: 150px;
+            }
+        }
+
+        .deactive {
+            display: none;
+        }
+    }
+}
