@@ -1,6 +1,7 @@
 "use strict"
 
 let products = JSON.parse(localStorage.getItem("basket"));
+let clearAll = document.querySelector("main button");
 let table = document.querySelector("main table");
 let total = table.nextElementSibling;
 let alert = document.querySelector("main .alert");
@@ -9,6 +10,7 @@ if (products != null && products.length != 0) {
     alert.classList.add("deactive");
     table.classList.remove("deactive");
     total.classList.remove("deactive");
+    clearAll.classList.remove("deactive");
 
     let totalPrice = 0;
 
@@ -32,7 +34,7 @@ if (products != null && products.length != 0) {
     let deleteProduct = document.querySelectorAll("main table tbody tr td i");
 
     for (const remove of deleteProduct) {
-        remove.addEventListener("click", function () {
+        remove.addEventListener("click", function() {
             let filterBasket = products.filter(p => p.id != parseInt(this.parentNode.parentNode.firstElementChild.innerText));
             localStorage.setItem("basket", JSON.stringify(filterBasket));
             let filteredBasket = JSON.parse(localStorage.getItem("basket"));
@@ -43,6 +45,7 @@ if (products != null && products.length != 0) {
                 alert.classList.add("deactive");
                 table.classList.remove("deactive");
                 total.classList.remove("deactive");
+                clearAll.classList.remove("deactive");
 
                 let totalPrice = 0;
 
@@ -68,6 +71,7 @@ if (products != null && products.length != 0) {
                 alert.classList.remove("deactive");
                 table.classList.add("deactive");
                 total.classList.add("deactive");
+                clearAll.classList.add("deactive");
             }
             
             if (filterBasket.length == 0) {
@@ -81,15 +85,21 @@ if (products != null && products.length != 0) {
             window.location.reload();
         })
     }
+
+    clearAll.addEventListener("click", function() {
+        localStorage.removeItem("basket");
+        window.location.reload();
+    })
 }
 
 else {
     alert.classList.remove("deactive");
     table.classList.add("deactive");
     total.classList.add("deactive");
+    clearAll.classList.add("deactive");
 }
 
-if (products == null && products.length == 0) {
+if (products == null || products.length == 0) {
     document.querySelector("header .cart sup").innerText = 0;
 }
 

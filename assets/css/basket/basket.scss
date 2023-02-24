@@ -54,7 +54,23 @@ main {
     .box {
         width: 85%;
 
+        button {
+            padding: 7px 13px;
+            border-radius: 7px;
+            border: 1px solid black;
+            background-color: transparent;
+            color: black;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+
         table {
+            margin-top: 35px;
+
             tbody {
                 tr {
                     td {
@@ -79,13 +95,13 @@ main {
         }
 
         .alert {
-            width: 90%;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
 
             h1 {
                 font-size: 40px;
-                margin-top: 150px;
+                margin-top: 50px;
             }
         }
 

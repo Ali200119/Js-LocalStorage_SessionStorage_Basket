@@ -51,6 +51,21 @@ main {
 main .box {
   width: 85%;
 }
+main .box button {
+  padding: 7px 13px;
+  border-radius: 7px;
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+  transition: 0.3s;
+}
+main .box button:hover {
+  background-color: black;
+  color: white;
+}
+main .box table {
+  margin-top: 35px;
+}
 main .box table tbody tr td img {
   width: 150px;
   height: 100px;
@@ -66,13 +81,13 @@ main .box h3 {
   margin-top: 70px;
 }
 main .box .alert {
-  width: 90%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 main .box .alert h1 {
   font-size: 40px;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 main .box .deactive {
   display: none;
