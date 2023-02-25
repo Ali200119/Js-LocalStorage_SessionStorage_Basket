@@ -51,6 +51,9 @@ main {
 main .box {
   width: 95%;
 }
+main .box .header {
+  text-align: center;
+}
 main .box button {
   padding: 7px 13px;
   border-radius: 7px;
@@ -58,6 +61,7 @@ main .box button {
   background-color: transparent;
   color: black;
   transition: 0.3s;
+  margin-top: 30px;
 }
 main .box button:hover {
   background-color: black;

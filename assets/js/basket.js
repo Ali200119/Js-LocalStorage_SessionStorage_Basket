@@ -1,6 +1,7 @@
 "use strict"
 
 let products = JSON.parse(localStorage.getItem("basket"));
+let header = document.querySelector("main .header");
 let clearAll = document.querySelector("main button");
 let table = document.querySelector("main table");
 let total = table.nextElementSibling;
@@ -11,6 +12,7 @@ if (products != null && products.length != 0) {
     table.classList.remove("deactive");
     total.classList.remove("deactive");
     clearAll.classList.remove("deactive");
+    header.classList.remove("deactive");
 
     let totalPrice = 0;
 
@@ -84,6 +86,8 @@ else {
     table.classList.add("deactive");
     total.classList.add("deactive");
     clearAll.classList.add("deactive");
+    header.classList.add("deactive");
+
 }
 
 if (products == null || products.length == 0) {
@@ -106,6 +110,8 @@ function removeProduct(element) {
         table.classList.remove("deactive");
         total.classList.remove("deactive");
         clearAll.classList.remove("deactive");
+        header.classList.remove("deactive");
+
     }
 
     else {
@@ -113,6 +119,8 @@ function removeProduct(element) {
         table.classList.add("deactive");
         total.classList.add("deactive");
         clearAll.classList.add("deactive");
+        header.classList.add("deactive");
+
     }
 
     if (filterBasket.length == 0) {

@@ -111,6 +111,9 @@ main {
                         background-color: black;
                         color: white;
                         height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
                         
                         p {
                             margin-top: 50px;
@@ -123,7 +126,7 @@ main {
 
                         button {
                             padding: 10px 15px;
-                            margin-top: 40px;
+                            margin-top: 50px;
                             color: white;
                             background-color: transparent;
                             border: 1px solid white;
